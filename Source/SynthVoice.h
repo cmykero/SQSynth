@@ -23,12 +23,14 @@ public:
 		return dynamic_cast<SynthSound*>(sound) != nullptr;
 	}//END CAN PLAY SOUND ======================
 
-	void startNote(int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition)
+	void startNote (int midiNoteNumber, float velocity, SynthesiserSound* sound, int currentPitchWheelPosition)
 	{
+		
+		
 		frequency = MidiMessage::getMidiNoteInHertz(midiNoteNumber);
 
-		//Logger::outputDebugString(std::to_string(midiNoteNumber));
-		std::cout << midiNoteNumber << std::endl;
+		Logger::outputDebugString(std::to_string(midiNoteNumber));
+		//std::cout << midiNoteNumber << std::endl;
 
 	}//END START NOTE ===========================
 

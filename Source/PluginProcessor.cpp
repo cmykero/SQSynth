@@ -104,6 +104,11 @@ void SqsynthAudioProcessor::changeProgramName (int index, const String& newName)
 //==============================================================================
 void SqsynthAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
+
+	ignoreUnused(samplesPerBlock);
+	lastSampleRate = sampleRate;
+	mySynth.setCurrentPlaybackSampleRate(lastSampleRate);
+
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
 }
