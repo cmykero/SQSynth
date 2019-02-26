@@ -24,6 +24,15 @@ SqsynthAudioProcessor::SqsynthAudioProcessor()
                        )
 #endif
 {
+    mySynth.clearVoices();
+
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	mySynth.addVoice(new SynthVoice());
+	//}
+
+	//mySynth.clearSounds();
+	//mySynth.addSound(new SynthSound());
 }
 
 SqsynthAudioProcessor::~SqsynthAudioProcessor()
@@ -131,6 +140,11 @@ bool SqsynthAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) 
 
 void SqsynthAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
+    buffer.clear();
+	mySynth.renderNextBlock(buffer,midiMessages, 0, buffer.getNumSamples());
+    
+    
+    
     ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();

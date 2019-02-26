@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="wgEk1J" name="SQSynth" projectType="audioplug" jucerVersion="5.4.3"
-              companyName="SQVST" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              companyName="SQVST" pluginCharacteristicsValue="pluginIsSynth,pluginProducesMidiOut,pluginWantsMidiIn"
               pluginChannelConfigs="{1,1},{2,2}">
   <MAINGROUP id="vihICB" name="SQSynth">
     <GROUP id="{49023BD8-9862-9DCF-C741-A2EE60BCD135}" name="Source">
@@ -12,6 +12,8 @@
       <FILE id="i2TBeE" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="M74z7m" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="W9UxEN" name="SynthSound.h" compile="0" resource="0" file="Source/SynthSound.h"/>
+      <FILE id="wTQ3RK" name="SynthVoice.h" compile="0" resource="0" file="Source/SynthVoice.h"/>
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
