@@ -26,13 +26,13 @@ SqsynthAudioProcessor::SqsynthAudioProcessor()
 {
     mySynth.clearVoices();
 
-	//for (int i = 0; i < 10; i++)
-	//{
-	//	mySynth.addVoice(new SynthVoice());
-	//}
+	for (int i = 0; i < 10; i++)
+	{
+		mySynth.addVoice(new SynthVoice);
+	}
 
-	//mySynth.clearSounds();
-	//mySynth.addSound(new SynthSound());
+	mySynth.clearSounds();
+	mySynth.addSound(new SynthSound());
 }
 
 SqsynthAudioProcessor::~SqsynthAudioProcessor()

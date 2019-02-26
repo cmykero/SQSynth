@@ -32,7 +32,7 @@ public:
 
 	}//END START NOTE ===========================
 
-	void StopNot(float velocity, bool allowTailOff)
+	void stopNote(float velocity, bool allowTailOff)
 	{
 		clearCurrentNote();
 	}//END STOP NOTE =============================
